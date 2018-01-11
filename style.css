@@ -1,0 +1,529 @@
+/*
+Theme Name: SOE Faculty Labs
+Theme URI: http://xtremelysocial.com/wordpress/child/
+Description: Child theme for Flat Bootstrap, SOE Faculty Labs gives faculty members the ability to easily create high-quality content for their labs.
+Author: University Relations
+Author url: https://univrelations.vcu.edu/
+Version: 1.01
+License: GNU General Public License
+License URI: http://www.opensource.org/licenses/GPL-3.0
+Template: flat-bootstrap
+Template Version: 1.9
+Tags: one-column, right-sidebar, left-sidebar, fluid-layout, responsive-layout, custom-header, custom-menu, featured-images, featured-image-header, full-width-template, flexible-header, theme-options, sticky-post, threaded-comments, light, translation-ready, rtl-language-support, custom-background
+*/
+
+
+/* 
+ * IMPORT the parent theme's stylesheet(s). NOTE: This was moved to functions.php for
+ * performance reasons.
+ */
+
+
+/*@import url("../flat-bootstrap/style.css");*/
+
+
+/* PUT YOUR CHANGED STYLES HERE 
+ * 
+ * The best way to do this is to copy in the relevant section from the parent's style.css
+ * file, change what you want, and remove the lines that you didn't change.
+ *
+ * NOTE: All these examples here are included just to show you how to do the most common
+ * things that users have requested, such as changing colors and the look of buttons, etc.
+*/
+
+
+/* Change the content (page) header to dark blue. */
+
+.content-header {
+  background-color: #2980b9;
+}
+
+
+/* Change the main link color to dark blue. Note that the hover color is set using a 
+ * neat trick with the opacity tag. This simply lightens whatever the link color is. That
+ * way we don't need to try to figure out a hover color that looks good. 
+ */
+
+a {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+  color: #2980b9;
+  opacity: .75;
+}
+
+/* Make the buttons square, if you'd like. */
+
+.btn {
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+}
+
+
+/* PUT ANY NEW STYLES TO USE IN YOUR CONTENT AREAS HERE SO YOU CAN EASILY PASTE THIS
+ * SECTION IF YOU CHANGE THEMES
+ */
+
+:focus {
+  outline: #4d90fe auto 1px !important;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+  /*margin-top: 30px;*/
+  margin-bottom: 0px;
+}
+
+header.content-header {
+  min-height: unset;
+}
+
+.site-content img,
+.site-content embed,
+.site-content iframe,
+.site-content media,
+.site-content swf,
+.site-content pre,
+.site-content code,
+.site-content container,
+.site-content select,
+.site-content .videopress-placeholder {
+  margin-bottom: 30px;
+}
+
+p {
+  margin: 0 0 30px;
+}
+
+#page,
+.navbar,
+.after-footer {
+  max-width: 100%;
+}
+
+#skip-links {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  margin-left: 0;
+  list-style: outside none;
+}
+
+a.skip-links-item,
+#wpadminbar .screen-reader-shortcut:focus {
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: underline;
+  position: absolute;
+  left: 15px;
+  top: -100px;
+  z-index: 10000;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px 15px;
+  background-color: transparent;
+  box-shadow: none;
+  color: #ffba00 !important;
+  outline: none;
+  transition: top .2s,background-color .2s;
+}
+
+a.skip-links-item:active,
+a.skip-links-item:focus {
+  top: 32px;
+  background-color: #000;
+}
+
+#wpadminbar .screen-reader-shortcut:active,
+#wpadminbar .screen-reader-shortcut:focus {
+  top: 32px;
+  background-color: #000;
+  color: #ffba00 !important;
+}
+
+.content-header {
+  background-color: transparent;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.content-header h1,
+.content-header h2,
+.content-header h3 {
+  color: #555;
+}
+
+.content-header .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.content-header-image {
+  background-color: transparent;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.header-image-title {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background-color: #f2f2f2;
+  color: #555 !important;
+}
+
+.page-title {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.section-image {
+  background-position: 50% 50%;
+  min-height: 192px !important;
+}
+
+.section-image-overlay {
+  display: block;
+  min-height: 192px !important;
+}
+
+.site-branding .site-branding-badge {
+  display: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .site-branding .site-branding-badge {
+    display: block;
+    float: left;
+    padding: 1em;
+    width: 128px;
+  }
+
+  .site-branding .site-branding-badge img {
+    width: 100%;
+  }
+}
+
+.site-branding .site-branding-text {
+  float: left;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+.site-branding .site-title {
+  font-weight: 700;
+  margin: 0;
+}
+
+.site-branding .site-title a:focus,
+.site-branding .site-title a:hover,
+.site-branding .site-title a:visited,
+.site-branding .site-title a {
+  color: #555;
+  text-transform: uppercase;
+}
+
+.site-branding .site-description {
+  font-weight: bold;
+  margin: 0;
+}
+
+.site-branding .site-school {
+  font-size: 16px;
+  margin: 0;
+}
+
+.site-branding .site-school a:focus,
+.site-branding .site-school a:hover,
+.site-branding .site-school a:visited,
+.site-branding .site-school a {
+  color: #555;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.vcu-branding-bar a:hover {
+  opacity: 1;
+}
+
+
+/* EGR footer */
+
+#footer-wrapper {
+  background-color: #777;
+}
+
+#footer {
+  background-color: #000;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 300px auto;
+  border-top: 10px solid #FFBA00;
+  padding: 0;
+}
+
+#footer h1,
+#footer h2,
+#footer h3,
+#footer h4,
+#footer h5,
+#footer h6 {
+  font-family: "Open Sans", sans-serif;
+}
+
+#footer a {
+  font-weight: 400;
+}
+
+#footer a:focus,
+#footer a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+#footer .btn {
+  border: none;
+  border-radius: 0;
+  font-family: "Open Sans Condensed", arial, sans-serif;
+  font-weight: 700;
+  outline: none;
+  text-shadow: none;
+  text-transform: uppercase;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#footer .btn-default {
+  background: #FFBA00;
+}
+
+#footer .btn-md {
+  padding: 20px;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+#footer .contact-area {
+  margin: 24px 0;
+  text-align: center;
+}
+
+#footer .contact-area .site-vcu {
+  color: #FFBA00;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 10px;
+  text-transform: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#footer .contact-area .site-vcu a {
+  color: #FFBA00;
+  font-weight: 400;
+}
+
+#footer .contact-area address {
+  color: #ccc;
+  font-size: 14px;
+}
+
+#footer .contact-area .site-title a,
+#footer .contact-area .site-description a,
+#footer .contact-area .site-school a {
+  color: #ccc;
+}
+
+#footer .contact-area .site-title,
+#footer .contact-area .site-description,
+#footer .contact-area .site-school {
+  color: #ccc;
+}
+
+#footer .contact-area .site-title {
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0;
+}
+
+#footer .contact-area .site-description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0;
+}
+
+#footer .contact-area .site-school {
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+}
+
+#footer .contact-area .widget,
+#footer .contact-area .widget a {
+  color: #ccc;
+}
+
+#footer .contact-area .widget-title {
+  color: #FFBA00;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+}
+
+#footer .icon-links {
+  font-size: 0;
+  margin: 24px 0;
+  text-align: center;
+}
+
+#footer .icon-links .link {
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: 5%;
+  text-decoration: none;
+  vertical-align: top;
+  width: 30%;
+}
+
+#footer .icon-links .link:last-child {
+  margin-right: 0;
+}
+
+#footer .icon-links .link .icon {
+  display: block;
+}
+
+#footer .icon-links .link .name {
+  color: #fff;
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  margin: 10px 0;
+  text-align: center;
+  transition: color 0.25s ease-in-out;
+}
+
+#footer .icon-links .link:hover,
+#footer .icon-links .link:focus {
+  text-decoration: none;
+}
+
+#footer .icon-links .link:hover .name {
+  color: #ffba00;
+}
+
+#footer .social-links {
+  text-align: center;
+  font-size: 0;
+  margin: 16px 0 48px 0;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#footer .social-links .social-link,
+#footer .social-links .social-link:focus {
+  color: #fff;
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  text-align: center;
+  padding: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #565656;
+  border-radius: 100%;
+  box-sizing: content-box;
+  margin: 0 5px;
+  background-color: #000;
+  text-decoration: none;
+}
+
+#footer .social-links .social-link:before {
+  font-size: 22px;
+  transition: color 0.25s ease-in-out;
+}
+
+#footer .social-links .social-link:hover,
+#footer .social-links .social-link:active {
+  text-decoration: none;
+  border-color: #000;
+  background-color: #ffba00;
+}
+
+#footer .social-links .social-link:hover:before {
+  color: #000;
+}
+
+#footer small {
+  clear: both;
+  color: #9c9c9c;
+  display: block;
+  margin: 0;
+  margin: 24px 0;
+  text-align: center;
+}
+
+#footer small a {
+  color: #9c9c9c;
+}
+
+@media only screen and (min-width: 600px) {
+
+  #footer .icon-links .link {
+    width: 16%;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+
+  #footer .icon-links .link:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #header .search-form {
+    width: 350px;
+  }
+
+  #footer .contact-area {
+    text-align: left;
+  }
+
+  #footer .social-links {
+    text-align: left;
+  }
+}
